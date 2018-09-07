@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css');
+$bg-color: #eceff2;
+$primary-color: #62CB31;
+$second-color: #657d95;
+$fade-color: #A7AFB8;
+$primary-font: 'Open Sans',
+sans-serif;
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+    span {
+        font-size: 8px;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: #79A70A;
+        background: linear-gradient(#74D348 0%, #74D348 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px;
+        right: -21px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #74D348;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #74D348;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid #74D348;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #74D348;
+        }
+    }
+}
+
+button {
+    outline: none !important;
+    user-select: none;
+}
+
+.typed-cursor {
+    display: none;
+}
+
+.h-button {
+    background-color: $primary-color;
+    color: white;
+    padding: 8px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 18px;
+    &:hover {
+        background-color: lighten($primary-color, 10);
+    }
+    &:active {
+        background-color: darken($primary-color, 10);
+        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.185);
+    }
+}
+
+.active {
+    color: $primary-color !important;
+    a {
+        color: $primary-color !important;
+    }
+}
+
+.bg-primary-color {
+    background-color: $primary-color;
+}
+
+.color-primary {
+    color: $primary-color;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $bg-color !important;
+    position: relative;
+    
+}
+
+section {
+    padding-top: 100px;
+}
+
+#header {
+    nav {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.219) !important;
+        .navbar {
+            font-weight: 600;
+            font-style: normal;
+            font-size: 13px;
+            a {
+                color: #455463;
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    outline: none !important;
+    transition: background-color .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+#page-top {
+    h1,
+    p {
+        color: $second-color;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 30px;
+    }
+}
+
+#components {
+    color: $second-color;
+}
+
+#features {
+    background-color: white;
+    .features {
+        p {
+            font-size: 13px;
+            color: #ADB4BD !important;
+        }
+    }
+    .header {
+        word-break: break-all;
+    }
+}
+
+#pricing {
+    .plan-card {
+        
+        .plan-body {
+            min-height: 500px;
+            position: relative;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.219);
+            .header {
+                padding: 0px 20px;
+                .price {
+                    span {
+                        font-size: .5em;
+                        font-weight: normal;
+                    }
+                }
+                p {
+                    font-size: .8em;
+                }
+            }
+            .plan-content {
+                .previous-plan {
+                    border: 1px dotted $primary-color;
+                    font-size: .9em;
+                    padding: 3px 0px;
+                }
+                .features {
+                    li {
+                        font-size: .9em;
+                        padding-top: 5px;
+                        i:first-child {
+                            font-size: 1.5em;
+                            font-weight: bold;
+                        }
+                        i:last-child {
+                            font-size: .9em;
+                        }
+                    }
+                }
+                button {
+                    padding: 8px 50px;
+                }
+            }
+        }
+    }
+}
+#brands {
+    img {
+        width: 100px;
+        filter: grayscale(100);
+    }
+}
+#footer {
+    border-top: 1px solid rgba(128, 128, 128, 0.24);
+    ul {
+        li {
+            display: inline-block;
+            padding-left: 8px;
+            font-size: .8em;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
